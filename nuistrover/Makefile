@@ -40,9 +40,11 @@ endef
 # Package install instructions; create a directory inside the package to hold our executable, and then copy the executable we built previously into the folder
 define Package/nuistrover/install
 		$(INSTALL_DIR) $(1)/usr/bin
-		#$(INSTALL_DIR) $(1)/etc/init.d
+		$(INSTALL_DIR) $(1)/etc/init.d
+		$(INSTALL_DIR) $(1)/lib/upgrade/keep.d
 		$(INSTALL_BIN) $(PKG_BUILD_DIR)/nuistrover $(1)/usr/bin
-		#$(INSTALL_BIN) ./files/nuistrover.init $(1)/etc/init.d/nuistrover
+		$(INSTALL_BIN) ./files/nuistrover.init $(1)/etc/init.d/nuistrover
+		$(INSTALL_DATA) ./files/nuistrover.keep $(1)/lib/upgrade/keep.d/nuistrover
 endef
  
 # This command is always the last, it uses the definitions and variables we give above in order to get the job done
