@@ -3,14 +3,14 @@ include $(TOPDIR)/rules.mk
 # Name, version and release number
 # The name and version of your package are used to define the variable to point to the build directory of your package: $(PKG_BUILD_DIR)
 PKG_NAME:=nuistrover
-PKG_VERSION:=1.1.1
-PKG_RELEASE:=3
+PKG_VERSION:=1.1.2
+PKG_RELEASE:=4
 HOST_BUILD_DEPENDS:=golang/host
  
 # Source settings (i.e. where to find the source codes)
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/zhufucdev/nuist_rover.git
-PKG_SOURCE_VERSION:=4c50e7badd95eb42c7860ada69e4334ef50e1e6c
+PKG_SOURCE_VERSION:=f0f5eb7d68bcde7160cb78cd28d06f21043c5ded
  
 include $(INCLUDE_DIR)/package.mk
  
